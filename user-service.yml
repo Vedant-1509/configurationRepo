@@ -1,0 +1,23 @@
+server:
+  port: 9020
+
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userDB
+    username: postgres
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secretkey: qwertyuiopqwertyuiuopolkjhgfdsarthgvrehgbeuythgvbthgyebitugbtgbiugbivuhbngiuhgbuhbgibg
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
