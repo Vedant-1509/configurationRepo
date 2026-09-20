@@ -42,7 +42,7 @@ spring:
             - AuthenticationFilter
 
 jwt:
-  secretKey: YOUR_SECRET_HERE
+  secretKey: qwertyuiopqwertyuiuopolkjhgfdsarthgvrehgbeuythgvbthgyebitugbtgbiugbivuhbngiuhgbuhbgibg
 
 management:
   endpoints:
