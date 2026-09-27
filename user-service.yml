@@ -14,14 +14,6 @@ spring:
     hibernate:
       ddl-auto: update
 
-jwt:
-  secretkey: qwertyuiopqwertyuiuopolkjhgfdsarthgvrehgbeuythgvbthgyebitugbtgbiugbivuhbngiuhgbuhbgibg
-
-logging:
-  level:
-    org.springframework.web: DEBUG
-    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
-
   security:
     oauth2:
       client:
@@ -33,3 +25,11 @@ logging:
               - openid
               - profile
               - email
+
+jwt:
+  secretkey: qwertyuiopqwertyuiuopolkjhgfdsarthgvrehgbeuythgvbthgyebitugbtgbiugbivuhbngiuhgbuhbgibg
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
