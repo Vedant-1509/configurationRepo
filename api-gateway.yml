@@ -13,11 +13,25 @@ spring:
     gateway:
       routes:
 
+        # Normal username/password authentication
         - id: auth-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/auth/**
 
+        # Google OAuth - authorization
+        - id: google-oauth
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/oauth2/**
+
+        # Google OAuth - callback
+        - id: google-oauth-callback
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/login/oauth2/**
+
+        # User APIs
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -25,6 +39,7 @@ spring:
           filters:
             - StripPrefix=2
 
+        # Posts APIs
         - id: posts-service
           uri: lb://POSTS-SERVICE
           predicates:
@@ -33,6 +48,7 @@ spring:
             - StripPrefix=2
             - AuthenticationFilter
 
+        # Connection APIs
         - id: connection-service
           uri: lb://CONNECTION-SERVICE
           predicates:
