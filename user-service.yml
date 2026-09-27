@@ -33,4 +33,6 @@ jwt:
 logging:
   level:
     org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.web.FilterChainProxy: TRACE
     org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
